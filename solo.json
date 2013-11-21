@@ -1,0 +1,8 @@
+{
+  "devenv": {
+    "user" : "test"
+  },
+  "run_list": [    
+    "role[devenv]"
+  ]
+}

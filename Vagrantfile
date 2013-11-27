@@ -125,8 +125,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.data_bags_path = "./chef/data_bags"
 
     chef.add_role("devenv")
+    
+    chef.node_name = "foo"
 
     chef.json = {
+      "hostname" => "vagrant.local",
       "timezone" => "Europe/Berlin",
       "devenv" => {
         "user" => "vagrant"

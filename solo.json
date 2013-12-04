@@ -1,6 +1,7 @@
 {
+  "timezone": "Europe/Berlin",
   "devenv": {
-    "user" : "test"
+    "user" : "krispin"
   },
   "run_list": [    
     "role[devenv]"

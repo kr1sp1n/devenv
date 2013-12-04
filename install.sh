@@ -1,3 +1,12 @@
+#!/bin/bash
+
+sudo apt-get update
+
+git=`which git`
+if ! test -f "$git"; then
+  sudo apt-get install git-core --yes --force-yes
+fi
+
 if ! test -d ./chef
 then
   echo "Checkout chef-repo..."

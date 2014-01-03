@@ -13,3 +13,11 @@ Requirements
 ```bash
 vagrant up
 ```
+
+## Copy ssh keys
+
+```bash
+vagrant ssh-config > ./vagrant.ssh.config
+scp -F vagrant.ssh.config ~/.ssh/id_rsa default:/home/vagrant/.ssh/
+scp -F vagrant.ssh.config ~/.ssh/id_rsa.pub default:/home/vagrant/.ssh/
+```

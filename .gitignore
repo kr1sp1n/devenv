@@ -7,3 +7,4 @@ chef
 .chef/*.pem
 .chef/*.pem.pub
 .chef/encrypted_data_bag_secret
+vagrant.ssh.config

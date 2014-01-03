@@ -1,7 +1,13 @@
 #!/bin/bash
 
-sudo apt-get update
+echo "Check for distro..."
+distro=`lsb_release -i | awk '{print $3}'`
 
+if [ "$distro" != "SUSE" ]; then
+  sudo apt-get update
+fi
+
+echo "Check for git..."
 git=`which git`
 if ! test -f "$git"; then
   sudo apt-get install git-core --yes --force-yes

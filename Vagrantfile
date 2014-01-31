@@ -22,11 +22,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :forwarded_port, guest: 8888, host: 8888 # PILVI
   config.vm.network :forwarded_port, guest: 8080, host: 8080 # SNS
-  config.vm.network :forwarded_port, guest: 3000, host: 3000 # any static HTTP 
+  config.vm.network :forwarded_port, guest: 8081, host: 8081 # Catalog API
+
+  # used for browser-sync
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 3001, host: 3001
+  config.vm.network :forwarded_port, guest: 3002, host: 3002
+  
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network :private_network, ip: "192.168.33.10"
+  config.vm.network :private_network, ip: "192.168.33.10" # use for browser-sync
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on

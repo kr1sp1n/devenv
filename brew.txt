@@ -1,0 +1,15 @@
+wget
+curl
+git
+erlang
+boot2docker
+docker
+leiningen
+lynx
+mongodb
+objective-caml
+opam
+opencv
+snowcrash
+tmux
+zeromq

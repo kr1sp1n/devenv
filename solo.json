@@ -1,9 +1,0 @@
-{
-  "timezone": "Europe/Berlin",
-  "devenv": {
-    "user" : "krispin"
-  },
-  "run_list": [    
-    "role[devenv]"
-  ]
-}
